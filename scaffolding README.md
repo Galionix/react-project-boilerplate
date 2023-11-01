@@ -2,7 +2,7 @@
 some initial data to work with
 
 ## How to use
-1. add user tasks to vscode:
+1. (once) add user tasks to vscode :
 ```
 {
     "version": "2.0.0",
@@ -59,9 +59,9 @@ some initial data to work with
     ]
 }
 ```
-2. run task `templates bootstrap`
-3. install vscode extension `Command Launcher` https://marketplace.visualstudio.com/items?itemName=Agui.command-launcher-tree
-4. You can now add such commands in settings.json:
+2. (per each new workspace) run task `templates bootstrap`
+3. (once) install vscode extension `Command Launcher` https://marketplace.visualstudio.com/items?itemName=Agui.command-launcher-tree
+4. (once) You can now add such commands in settings.json :
 ```
 "commandLauncher.actions": [{
 	"command": "make",
@@ -77,7 +77,7 @@ some initial data to work with
 },
 ]
 ```
-5. Exclude templates folder from typescript checking in tsconfig.json:
+5. (per each new workspace)  Exclude templates folder from typescript checking in tsconfig.json:
 ```
 {
 
@@ -87,3 +87,6 @@ some initial data to work with
 ```
 
 its a robust setup but for now its enough tools to work with
+
+this approach allows seamlessly use makefile as well through command launcher, but it requires some additional setup.
+easy templating done!
