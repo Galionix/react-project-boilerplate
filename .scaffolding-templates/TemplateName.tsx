@@ -3,8 +3,8 @@ import bind from "classnames/bind"
 
 const cx = bind.bind(styles)
 
-type TemplateNameProps = {};
-export const TemplateName = ({}: TemplateNameProps) => (
+type TTemplateNameProps = {};
+export const TemplateName = ({}: TTemplateNameProps) => (
   <div className={cx({
     templateName: true
   })} data-testid="TemplateName">

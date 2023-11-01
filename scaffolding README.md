@@ -60,7 +60,22 @@ some initial data to work with
 }
 ```
 2. run task `templates bootstrap`
-3. install vscode extension `Save Commands` https://marketplace.visualstudio.com/items?itemName=deepakgupta191199.save-commands
-4. You can now add such commands:
+3. install vscode extension `Command Launcher` https://marketplace.visualstudio.com/items?itemName=Agui.command-launcher-tree
+4. You can now add such commands in settings.json:
+```
+"commandLauncher.actions": [{
+	"command": "make",
+	"group": "react",
+	"label": "create component",
+	"arguments": [
+		"comp N=\"",
+		{
+			"inputContext": "Please, enter a name."
+		},
+		"\""
+	]
+},
+]
+```
 
-    - `make component` - make comp N="{{arg1}}"
+its a robust setup but for now its enough tools to work with
