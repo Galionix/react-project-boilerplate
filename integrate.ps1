@@ -8,12 +8,26 @@ if (!(Test-Path $makefile)) {
 # append to Makefile new lines
 $lines = @(
     "",
-    "# make react component: make comp N=""componentName""",
+    "# make react component: make comp N=`"componentName`"",
     "",
-    "N = $(COMPONENT_NAME)",
+    "N = `$(COMPONENT_NAME)",
     "",
     "comp:",
-    "    @echo ""Creating component ""$(N)"""..."",
-    "    npx generate-react-cli component $(N)",
+    "    @echo `"Creating component `"`$(N)`"...",
+    "    npx generate-react-cli component `$(N)"
 
 )
+Add-Content $makefile $lines
+
+# if .gitignore is not present, create it
+$gitignore = ".gitignore"
+if (!(Test-Path $gitignore)) {
+    New-Item $gitignore -type file
+}
+
+# append to .gitignore new lines
+
+$gitignoreLines = @(
+    ".templates"
+)
+Add-Content $gitignore $gitignoreLines
