@@ -1,13 +1,11 @@
-import styles from "./templateName.module.css";
-import bind from "classnames/bind"
-
-const cx = bind.bind(styles)
+import styles from "./templateName.module.scss";
 
 type TTemplateNameProps = {};
-export const TemplateName = ({}: TTemplateNameProps) => (
-  <div className={cx({
-    templateName: true
-  })} data-testid="TemplateName">
-    <h1>TemplateName component</h1>
-  </div>
-);
+export const TemplateName = ({ }: TTemplateNameProps) => {
+
+  return (
+    <div className={styles.templateName} data-testid="TemplateName">
+      <h1>TemplateName component</h1>
+    </div>
+  )
+};
