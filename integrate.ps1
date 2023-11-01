@@ -13,8 +13,8 @@ $lines = @(
     "N = `$(COMPONENT_NAME)",
     "",
     "comp:",
-    "    @echo `"Creating component `"`$(N)`"...",
-    "    npx generate-react-cli component `$(N)"
+    "	@echo `"Creating component `"`$(N)`"...",
+    "	npx generate-react-cli component `$(N)"
 
 )
 Add-Content $makefile $lines
