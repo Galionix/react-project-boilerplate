@@ -77,5 +77,13 @@ some initial data to work with
 },
 ]
 ```
+5. Exclude templates folder from typescript checking in tsconfig.json:
+```
+{
+
+  "exclude": [".scaffolding-templates/*"]
+}
+
+```
 
 its a robust setup but for now its enough tools to work with
