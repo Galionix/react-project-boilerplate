@@ -1,8 +1,29 @@
 # react-project-boilerplate
 some initial data to work with
 
+
+
 ## How to use
-1. (once) add user tasks to vscode :
+1. run task `templates bootstrap`
+2. Exclude templates folder from typescript checking in tsconfig.json:
+```
+{
+
+  "exclude": [".scaffolding-templates/*"]
+}
+
+```
+
+
+its a robust setup but for now its enough tools to work with
+
+this approach allows seamlessly use makefile as well through command launcher, but it requires some additional setup.
+easy templating done!
+
+
+
+## Setup on new Machine / New VSCode
+1. add user tasks to vscode :
 ```
 {
     "version": "2.0.0",
@@ -59,9 +80,8 @@ some initial data to work with
     ]
 }
 ```
-2. (per each new workspace) run task `templates bootstrap`
-3. (once) install vscode extension `Command Launcher` https://marketplace.visualstudio.com/items?itemName=Agui.command-launcher-tree
-4. (once) You can now add such commands in settings.json :
+2. install vscode extension `Command Launcher` https://marketplace.visualstudio.com/items?itemName=Agui.command-launcher-tree
+3. You can now add such commands in settings.json :
 ```
 "commandLauncher.actions": [{
 	"command": "make",
@@ -77,16 +97,3 @@ some initial data to work with
 },
 ]
 ```
-5. (per each new workspace)  Exclude templates folder from typescript checking in tsconfig.json:
-```
-{
-
-  "exclude": [".scaffolding-templates/*"]
-}
-
-```
-
-its a robust setup but for now its enough tools to work with
-
-this approach allows seamlessly use makefile as well through command launcher, but it requires some additional setup.
-easy templating done!
