@@ -30,6 +30,6 @@ if (!(Test-Path $gitignore)) {
 $gitignoreLines = @(
     "# hide workspace templates",
     "",
-    ".templates"
+    ".scaffolding-templates"
 )
 Add-Content $gitignore $gitignoreLines
