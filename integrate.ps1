@@ -28,6 +28,8 @@ if (!(Test-Path $gitignore)) {
 # append to .gitignore new lines
 
 $gitignoreLines = @(
+    "# hide workspace templates",
+    "",
     ".templates"
 )
 Add-Content $gitignore $gitignoreLines
