@@ -1,7 +1,5 @@
 # react-project-boilerplate
-some initial data to work with
-
-
+some templating solutions
 
 ## How to use
 1. run task `templates bootstrap`
